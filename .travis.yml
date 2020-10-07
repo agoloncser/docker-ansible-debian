@@ -6,4 +6,5 @@ env:
     - VERSION=1.${TRAVIS_BUILD_NUMBER}
     - FROM_DISTRO=debian
   jobs:
+    - IMAGE=docker-ansible-debian10 FROM_TAG=bullseye
     - IMAGE=docker-ansible-debian10 FROM_TAG=10
