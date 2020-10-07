@@ -4,7 +4,7 @@
 
 Debian-based docker images for testing Ansible code.
 
-Includes systemd.
+Includes systemd and python3.
 
 ## Running this image
 
