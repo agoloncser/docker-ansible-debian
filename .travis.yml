@@ -1,0 +1,9 @@
+---
+version: ~> 1.0
+import: agoloncser/travis-shared-configs:docker-ansible-matrix.yml
+env:
+  global:
+    - VERSION=1.${TRAVIS_BUILD_NUMBER}
+    - FROM_DISTRO=debian
+  jobs:
+    - IMAGE=docker-ansible-debian10 FROM_TAG=10
