@@ -1,4 +1,5 @@
-FROM ${FROM_DISTRO}:${FROM_TAG}
+ARG FROM_TAG=10
+FROM debian:${FROM_TAG}
 MAINTAINER https://github.com/agoloncser
 ENV container docker
 
