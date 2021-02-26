@@ -4,18 +4,19 @@ on:
   push: {}
   pull_request: {}
   schedule:
-    - cron: "12 5 * * *"
+    - cron: "12 6 * * 3"
 
 jobs:
-  molecule:
+  build:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         include:
-          - IMAGE: docker-ansible-debian11
+          - IMAGE: "docker-ansible-debian11"
             FROM_TAG: "bullseye"
-          - IMAGE: docker-ansible-debian10
+
+          - IMAGE: "docker-ansible-debian10"
             FROM_TAG: "10"
 
     steps:
